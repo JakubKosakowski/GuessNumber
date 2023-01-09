@@ -23,6 +23,9 @@ if __name__ == "__main__":
     while True:
         try:
             player_number = int(input("Guess the number between 1 to 100: "))
+            if player_number < 0 or player_number > 100:
+                print("Number out of range!")
+                continue
         except ValueError:
             print("It's not a number!")
             continue
