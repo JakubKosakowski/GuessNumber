@@ -2,10 +2,16 @@
 Check, if the number is bigger or lesser than generated number.
 
 Parameters:
-n (int): Checked number
+val (int), check (int): Compared numbers
 
 Returns:
-bool: Returning value
+str: Returning information
 """
-def check_number(n:int) -> bool:
-    pass
+def check_number(val:int, check:int) -> str:
+    if val > check:
+        return "To big!"
+    elif val < check:
+        return "To small!"
+    return "You win!"
+
+
