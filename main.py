@@ -26,11 +26,16 @@ if __name__ == "__main__":
             if player_number < 0 or player_number > 100:
                 print("Number out of range!")
                 continue
+            result = check_number(player_number, generated_number)
+            print(result)
+            if result == "You win!":
+                exit()
         except ValueError:
             print("It's not a number!")
             continue
         except KeyboardInterrupt:
             print("Data entry was interrupted!")
+            exit()
 
 
 
